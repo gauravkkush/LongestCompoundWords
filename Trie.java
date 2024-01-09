@@ -40,7 +40,7 @@ public class Trie {
                 if (word.length() > result[0].length()) {
                     result[1] = result[0];
                     result[0] = word;
-                } else if (word.length() > result[1].length() || result[1] == null) {
+                } else if (word.length() > result[1].length() || result[1].isEmpty()) {
                     result[1] = word;
                 }
             }
@@ -59,7 +59,7 @@ public class Trie {
                     return false;
                 }
                 node = node.children[index];
-                if (node.isEndOfWord && isCompoundWord(word, i + 1, root, count + 1, true)) {
+                if (node.isEndOfWord && isCompoundWord(word, i + 1, node, count + 1, true)) {
                     return true;
                 }
             }
@@ -87,7 +87,7 @@ public class Trie {
     public static void main(String[] args) throws FileNotFoundException {
 
         // change file name here to : "Input_01.txt", "Input_02.txt"
-        File inputFile = new File("Input_01.txt");
+        File inputFile = new File("Input_03.txt");
 
         Scanner scanner = new Scanner(inputFile);
 
