@@ -1,4 +1,4 @@
-# Longest Compound Word Finder
+# Longest Compound Words
 
 This Java program implements a Trie data structure to find the longest and second longest compound words from a list of words.
 
